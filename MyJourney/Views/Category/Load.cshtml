@@ -1,0 +1,16 @@
+﻿@model MyJourney.Models.Category
+
+    <div class="row">
+        <div class="col-md-4">
+            @if (Model != null)
+            {
+                <span>Category Id: @Model.Id</span><br />
+                <span>Category Name: @Model.Name</span>
+            }
+            else
+            {
+                <h3>No such category found.</h3>
+            }
+
+         </div>
+     </div>
