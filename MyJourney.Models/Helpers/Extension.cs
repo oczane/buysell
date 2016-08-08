@@ -12,5 +12,13 @@ namespace MyJourney.Models.Helpers
         {
             return inputString.Trim().Replace(" ", "-");
         }
+
+        public static string PrettyTitle(this string inputString)
+        {
+            if (inputString.Length > 22)
+                return inputString.Substring(0, 22) + "...";
+
+            return inputString;
+        }
     }
 }

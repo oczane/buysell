@@ -1,0 +1,9 @@
+﻿@using MyJourney.Controllers.Helper;
+
+<ul class="nav navbar-nav">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    @foreach (var category in MenuHelper.GetMenu())
+    {
+        <li>@Html.ActionLink(category.Name, "WebsiteAbout", "Home")</li>
+    }
+</ul>

@@ -1,15 +1,17 @@
-﻿@model MyJourney.Models.Category
+﻿@model List<MyJourney.Models.Category>
 
     <div class="row">
         <div class="col-md-4">
             @if (Model != null)
             {
-                <span>Category Id: @Model.Id</span><br />
-                <span>Category Name: @Model.Name</span>
+                foreach(var category in Model)
+                {
+                    <a href="#">@category.Name</a>
+                }
             }
             else
             {
-                <h3>No such category found.</h3>
+                <h3>No category found.</h3>
             }
 
          </div>

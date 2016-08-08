@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BC016321-D51A-4B31-A67A-E7CEC014B1B7}</ProjectGuid>
+    <ProjectGuid>{F6588547-99A1-4A18-8C6E-561439FCF487}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyJourney.Models</RootNamespace>
-    <AssemblyName>MyJourney.Models</AssemblyName>
+    <RootNamespace>MyJourney.Services</RootNamespace>
+    <AssemblyName>MyJourney.Services</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,12 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="MyJourney.Models">
+      <HintPath>..\MyJourney.Models\bin\Debug\MyJourney.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="MyJourney.Repository">
+      <HintPath>..\MyJourney.Repository\bin\Debug\MyJourney.Repository.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,14 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Advertisement.cs" />
-    <Compile Include="BuySellContext.cs" />
-    <Compile Include="Category.cs" />
-    <Compile Include="Helpers\Extension.cs" />
+    <Compile Include="AdvertisementService\AdvertisementService.cs" />
+    <Compile Include="AdvertisementService\IAdvertisementService.cs" />
+    <Compile Include="CategoryService\CategoryService.cs" />
+    <Compile Include="CategoryService\ICategoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="VisitorLog.cs" />
+    <Compile Include="VisitorLog\IVReadLog.cs" />
+    <Compile Include="VisitorLog\VLog.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

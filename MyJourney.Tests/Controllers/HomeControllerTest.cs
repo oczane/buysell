@@ -1,22 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MyJourney;
 using MyJourney.Controllers;
+using MyJourney.Models;
 
 namespace MyJourney.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest
     {
-        [TestMethod]
+        MyJourney.Services.AdvertisementService.IAdvertisementService _advertisement;
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            MyJourney.AppRepository.IRepository<Advertisement> repo = new MyJourney.AppRepository.Repository<Advertisement>();
+            _advertisement = new MyJourney.Services.AdvertisementService.AdvertisementService(repo);
+        }
+
+       [TestMethod]
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            HomeController controller = new HomeController(_advertisement);
 
             // Act
             ViewResult result = controller.Index() as ViewResult;
@@ -29,7 +34,7 @@ namespace MyJourney.Tests.Controllers
         public void About()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            HomeController controller = new HomeController(_advertisement);
 
             // Act
             ViewResult result = controller.About() as ViewResult;
@@ -42,7 +47,7 @@ namespace MyJourney.Tests.Controllers
         public void Contact()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            HomeController controller = new HomeController(_advertisement);
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;

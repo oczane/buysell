@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyJourney.Controllers", "My
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyJourney.Models", "MyJourney.Models\MyJourney.Models.csproj", "{BC016321-D51A-4B31-A67A-E7CEC014B1B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyJourney.AppRepository", "MyJourney.Repository\MyJourney.AppRepository.csproj", "{B6AC792E-0C63-4E33-81B1-75C58284179E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyJourney.Services", "MyJourney.Services\MyJourney.Services.csproj", "{F6588547-99A1-4A18-8C6E-561439FCF487}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{BC016321-D51A-4B31-A67A-E7CEC014B1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC016321-D51A-4B31-A67A-E7CEC014B1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC016321-D51A-4B31-A67A-E7CEC014B1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6AC792E-0C63-4E33-81B1-75C58284179E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AC792E-0C63-4E33-81B1-75C58284179E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AC792E-0C63-4E33-81B1-75C58284179E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AC792E-0C63-4E33-81B1-75C58284179E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6588547-99A1-4A18-8C6E-561439FCF487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6588547-99A1-4A18-8C6E-561439FCF487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6588547-99A1-4A18-8C6E-561439FCF487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6588547-99A1-4A18-8C6E-561439FCF487}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

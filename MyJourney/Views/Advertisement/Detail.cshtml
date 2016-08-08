@@ -1,0 +1,48 @@
+﻿@model MyJourney.Models.Advertisement
+
+
+@{
+    ViewBag.Title = "Advertisement Details";
+}
+
+<div>
+    <h3>
+        @if (Model != null)
+        {
+            @Model.Title
+        }        
+    </h3>
+</div>
+
+<div class="row">
+    @if (Model != null)
+    {
+        <div class="col-md-4">
+            <p>
+                <img src="~/advs/@Model.Image" width="300" />
+            </p>
+            <p style="background-color:silver">
+                <b>By</b> - @Model.User.FirstName @Model.User.LastName
+            </p>
+            <p style="background-color:silver">
+                <b>Mobile</b> - 0 - @Model.User.MobileNumber
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h4>@Model.Title</h4>
+            <p style="text-align:justify">
+                @Model.Description
+            </p>
+            
+        </div>
+    }
+    else
+    {
+        <div class="col-md-4">
+            <p>
+                <h3>No such advertisement found.</h3>
+            </p>
+        </div>
+    }
+
+</div>

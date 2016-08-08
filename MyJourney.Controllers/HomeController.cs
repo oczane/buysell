@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using MyJourney.Models;
+﻿using System.Web.Mvc;
+using MyJourney.Controllers.Filters;
 
 namespace MyJourney.Controllers
 {
+    [TrackVisitor]
     public class HomeController : Controller
     {
+        MyJourney.Services.AdvertisementService.IAdvertisementService _advertisement;
+
+        public HomeController(MyJourney.Services.AdvertisementService.IAdvertisementService advertisement)
+        {
+            _advertisement = advertisement;
+        }
+
         public ActionResult Index()
         {
-            Category ct = new Category();
-            ct.Id = 1;
-            ct.Name = "Books";
-
-            List<Category> categories = new List<Category>()
-            {
-                new Category { Id = 1, Name = "Books" },
-                new Category { Id = 2, Name = "Fashions and Beauty"},
-                new Category { Id = 3, Name = "Toys and Trains" }
-            };
-                
-            return View(categories);
+            return View(_advertisement.GetTop10Adveetisements());
         }
 
         [ActionName("WebsiteAbout")]
