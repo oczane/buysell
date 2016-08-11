@@ -10,7 +10,7 @@ using MyJourney.Models;
 namespace MyJourney.Controllers
 {
     [TrackVisitor]
-    public class AdvertisementController : Controller
+    public class AdvertisementController : BaseController
     {
         MyJourney.Services.AdvertisementService.IAdvertisementService _advertisement;
 

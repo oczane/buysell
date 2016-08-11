@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyJourney.Models
 {
@@ -10,6 +11,7 @@ namespace MyJourney.Models
         public int Id { get; set; }
         [Required]
         [EmailAddress]
+        [MaxLength(100)]
         public string Email { get; set; }
         [Required]
         [MaxLength(100)]

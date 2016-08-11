@@ -16,10 +16,13 @@ namespace MyJourney.Models
         [Required]
         public int UserId { get; set; }
         [Required]
+        [MaxLength(100)]
         public string Title { get; set; }
         [Required]
+        [MaxLength]
         public string Description { get; set; }
         [Required]
+        [MaxLength(200)]
         public string Image { get; set; }
         public int Views { get; set; }
 

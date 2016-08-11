@@ -4,7 +4,7 @@ using MyJourney.Controllers.Filters;
 namespace MyJourney.Controllers
 {
     [TrackVisitor]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         MyJourney.Services.AdvertisementService.IAdvertisementService _advertisement;
 
@@ -13,11 +13,13 @@ namespace MyJourney.Controllers
             _advertisement = advertisement;
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             return View(_advertisement.GetTop10Adveetisements());
         }
 
+        [HttpGet]
         [ActionName("WebsiteAbout")]
         public ActionResult About()
         {
@@ -26,6 +28,7 @@ namespace MyJourney.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

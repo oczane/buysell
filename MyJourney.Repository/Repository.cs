@@ -33,6 +33,13 @@ namespace MyJourney.AppRepository
             context.SaveChanges();
         }
 
+        public virtual TEntity InsertReturnEntity(TEntity entity)
+        {
+            dbSet.Add(entity);
+            context.SaveChanges();
+            return entity;
+        }
+
         public virtual void Delete(object id)
         {
             TEntity entityToDelete = dbSet.Find(id);

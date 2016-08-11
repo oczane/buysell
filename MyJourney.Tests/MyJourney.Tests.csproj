@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="Repository\UserRepositoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -116,7 +117,7 @@
       <Name>MyJourney.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyJourney\MyJourney.csproj">
-      <Project>{65B0DCF2-231B-4C8E-8AE2-F1D0556BA1FB}</Project>
+      <Project>{65b0dcf2-231b-4c8e-8ae2-f1d0556ba1fb}</Project>
       <Name>MyJourney</Name>
     </ProjectReference>
   </ItemGroup>

@@ -17,6 +17,8 @@ namespace MyJourney
             container.RegisterType<MyJourney.AppRepository.IRepository<Advertisement>, MyJourney.AppRepository.Repository<Advertisement>>();
             container.RegisterType<MyJourney.AppRepository.IRepository<VisitorLog>, MyJourney.AppRepository.Repository<VisitorLog>>();
             container.RegisterType<MyJourney.AppRepository.IRepository<Category>, MyJourney.AppRepository.Repository<Category>>();
+            container.RegisterType<MyJourney.AppRepository.IRepository<User>, MyJourney.AppRepository.Repository<User>>();
+            container.RegisterType<MyJourney.Services.UserService.Interface.IRegisterService, MyJourney.Services.UserService.Impl.RegisterService>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

@@ -52,6 +52,8 @@
     <Compile Include="CategoryService\CategoryService.cs" />
     <Compile Include="CategoryService\ICategoryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService\Impl\RegisterService.cs" />
+    <Compile Include="UserService\Interface\IRegisterService.cs" />
     <Compile Include="VisitorLog\IVReadLog.cs" />
     <Compile Include="VisitorLog\VLog.cs" />
   </ItemGroup>

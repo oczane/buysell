@@ -4,7 +4,7 @@ using MyJourney.Models;
 
 namespace MyJourney.Controllers
 {
-    public class CategoryController : Controller
+    public class CategoryController : BaseController
     {
         BuySellContext _context;
 

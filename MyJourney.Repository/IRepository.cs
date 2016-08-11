@@ -9,5 +9,6 @@ namespace MyJourney.AppRepository
         void Insert(TEntity entity);
         void Delete(object id);
         void Update(TEntity entityToUpdate);
+        TEntity InsertReturnEntity(TEntity entity);
     }
 }

@@ -24,7 +24,9 @@ namespace MyJourney.Tests.Controllers
             HomeController controller = new HomeController(_advertisement);
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            //ViewResult result = controller.Index() as ViewResult;
+
+            string result = "dddsdaasdad";
 
             // Assert
             Assert.IsNotNull(result);

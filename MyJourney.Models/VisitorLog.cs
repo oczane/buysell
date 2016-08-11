@@ -9,6 +9,7 @@ namespace MyJourney.Models
         [Required]
         public Guid Id { get; set; }
         [Required]
+        [MaxLength(200)]
         public string Url { get; set; }
         [Required]
         public DateTime Created { get; set; }

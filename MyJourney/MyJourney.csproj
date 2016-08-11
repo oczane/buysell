@@ -278,6 +278,7 @@
     <Content Include="Views\Category\Load.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Advertisement\Detail.cshtml" />
+    <Content Include="Views\Session\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
