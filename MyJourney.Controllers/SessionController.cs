@@ -18,6 +18,7 @@ namespace MyJourney.Controllers
             registerService = _registerService;
         }
 
+        [HttpPost]
         public ActionResult Register(User model)
         {
             if (ModelState.IsValid)
