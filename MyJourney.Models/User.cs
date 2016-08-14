@@ -23,7 +23,8 @@ namespace MyJourney.Models
         [MaxLength(10)]
         public string MobileNumber { get; set; }
         [Required]
-        [MaxLength(10)]
+        [MinLength(8)]
+        [MaxLength(100)]
         public string Password { get; set; }
         [Required]
         public DateTime Created { get; set; }

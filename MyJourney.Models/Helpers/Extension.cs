@@ -20,5 +20,11 @@ namespace MyJourney.Models.Helpers
 
             return inputString;
         }
+
+        public static string PrettyUserName(this string inputstring)
+        {
+            string[] rawString = inputstring.Split('|');
+            return rawString[0].ToString();
+        }
     }
 }

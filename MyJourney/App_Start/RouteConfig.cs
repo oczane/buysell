@@ -10,6 +10,12 @@ namespace MyJourney
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Session",
+                url: "Session/{action}/{id}",
+                defaults: new { controller = "Session", action = "Register", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "AppCategory",
                 url: "AppCategory/{action}/{id}",
                 defaults: new { controller = "Category", action = "Load", id = UrlParameter.Optional }
