@@ -13,24 +13,33 @@
 </div>
 
 <div class="row">
-    @foreach (Advertisement advertisement in Model)
-    {
+    <div class="col-md-8">
+        @foreach (Advertisement advertisement in Model)
+        {
             <div class="col-md-3" style="border-style: dotted dotted dotted dotted;margin-bottom:20px;">
                 <h4>@advertisement.Title.PrettyTitle()</h4>
-                 <p>
-                 <img src="~/advs/@advertisement.Image" width="100" />
+                <p>
+                    <img src="~/advs/@advertisement.Image" width="100" />
                 </p>
                 <p>
-                @Html.ActionLink("View", "Detail", "Advertisement", new { id = advertisement.Title.Pretty() }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("View", "Detail", "Advertisement", new { id = advertisement.Title.Pretty() }, new { @class = "btn btn-default" })
                 </p>
                 <p>&nbsp;</p>
             </div>
             <div class="col-md-1"></div>
-    }
- 
-</div>
+        }
+
+    </div>
+    
+    <div class="col-md-1"></div>
+    
+    <div class="col-md-3" id="divTop10">
+        <img src="@Url.Content("~/Content/images/loader.png")" width="100px" id="imgLoader" />
+    </div>
+
+    </div>
 
 @section scripts {
-    <script type="text/javascript" src="~/Scripts/app/user-state.js">
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/user-state.js")">
     </script>
 }

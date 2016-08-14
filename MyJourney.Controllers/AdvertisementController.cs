@@ -24,5 +24,11 @@ namespace MyJourney.Controllers
             Advertisement adv = _advertisement.GetAdvertisementDetailByName(id.Replace("-", " "));
             return View(adv);
         }
+
+        [HttpGet]
+        public ActionResult Top10Advert()
+        {
+            return Json(_advertisement.GetTop10Adveetisements().Take(10).ToList(), JsonRequestBehavior.AllowGet);
+        }
     }
 }

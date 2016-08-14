@@ -19,6 +19,13 @@ namespace MyJourney.Controllers
 
             return View(result);
         }
+
+        public ActionResult JsonLoad()
+        {
+            var result = _context.Category.ToList();
+
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
     }
 
 }
